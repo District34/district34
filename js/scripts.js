@@ -249,6 +249,9 @@
         $('.dropdown').removeClass('open');
         $('.form-validation').html('').removeClass('alert-danger alert-success')
         $('.g-recaptcha').html('')
+        $('script[src*="gstatic.com/recaptcha"]').remove()
+        $('script[src*="google-analytics.com/analytics.js"]').remove()
+        $('.g-recaptcha-bubble-arrow').parent().remove()
         setTimeout(done, 500)
     }
 
